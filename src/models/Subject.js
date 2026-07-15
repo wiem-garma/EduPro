@@ -5,7 +5,7 @@ const subjectSchema = new mongoose.Schema({
   code: { type: String, required: true, unique: true },
   coefficient: { type: Number, required: true, default: 1 },
   teacherId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  classId: { type: mongoose.Schema.Types.ObjectId, ref: 'Class'},
+  classId: { type: mongoose.Schema.Types.ObjectId, ref: 'Class', required: true },
   weeklyHours: Number,
   academicYear: String,
 }, { timestamps: true });

@@ -17,17 +17,21 @@ const teacherSubjectController = require("../controllers/TeacherSubjectControlle
 // =====================
 // Classes
 // =====================
-
 router.route("/classes")
-    .get(classController.getAll)
-    .post(classController.create);
+
+.get(classController.getAll)
+
+.post(classController.create);
+
 
 
 router.route("/classes/:id")
-    .get(classController.getById)
-    .put(classController.update)
-    .delete(classController.delete);
 
+.get(classController.getById)
+
+.put(classController.update)
+
+.delete(classController.delete);
 
 
 // =====================

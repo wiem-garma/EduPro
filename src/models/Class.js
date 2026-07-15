@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');   // ← AJOUT OBLIGATOIRE
 
 const classSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true, unique: true  },
   level: { type: String, required: true },
   section: String,
   academicYear: { type: String, required: true },

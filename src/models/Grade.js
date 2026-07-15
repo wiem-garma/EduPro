@@ -9,6 +9,6 @@ const gradeSchema = new mongoose.Schema({
   date: { type: Date, required: true },
   semester: {type: Number, required: true },
   academicYear: { type: String, required: true },
-   remark: String,
+  remark: String,
 }, { timestamps: true });
 module.exports = mongoose.model('Grade', gradeSchema);

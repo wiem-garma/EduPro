@@ -12,15 +12,13 @@ class BaseService {
     return await this.model.create(data);
   }
 
-
-  async getAll(filters = {}) {
-        let query = this.model.find(filters);
-
-        if(this.populateFields.length > 0){
-            query = query.populate(this.populateFields);
-        }
-        return await query.exec();
+async getAll(filters={}){
+    let query=this.model.find(filters);
+    if(this.populateFields && this.populateFields.length > 0){
+       query.populate(this.populateFields);
     }
+    return await query.exec();
+}
 
   async getById(id) {
     let query = this.model.findById(id);
